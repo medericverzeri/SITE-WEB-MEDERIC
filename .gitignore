@@ -1,0 +1,23 @@
+# Dépendances et résultats de compilation
+/node_modules/
+/.next/
+/out/
+/coverage/
+*.tsbuildinfo
+
+# Secrets et configuration locale de la plateforme de prévisualisation
+.env*
+!.env.example
+/drizzle.config.json
+
+# Liaison locale avec un projet Vercel
+/.vercel/
+
+# Archives d’export locales (ne pas publier les sources du projet dans le site déployé)
+/public/downloads/
+/exports/
+
+# Captures et journaux de vérification
+/.qa/
+*.log
+.DS_Store
