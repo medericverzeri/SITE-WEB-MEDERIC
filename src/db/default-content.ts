@@ -182,7 +182,7 @@ const COMPANIES = [
   company("Solitex Oise", "Le réemploi du textile", "https://www.solitex-oise.com", ref("MAHP9rHSuds"), [ref("MAHP9pCj_7E")]),
   company("Recycl’aide Oise", "Le réemploi des aides techniques", "https://recyclaide.fr/?page=accueil", ref("MAHP9lY8M6A"), [ref("MAHP9pN8tJU")]),
   company("Matériosol", "L’économie circulaire des matériaux", "https://eco-solidaire.fr/materiosol", ref("MAHP90_NSFE"), [ref("MAHHOnURXyw")]),
-  company("Le Comptoir C\nBeauvais", "Économie circulaire et communs du Beauvaisis", "https://eco-solidaire.fr/groupe-mes/nos-lieux/comptoir-c", ref("comptoir-c"), []),
+  company("Comptoir C\nEnsemble de services sur Beauvais", "Réemploi, réparation et services de proximité", "https://eco-solidaire.fr/groupe-mes/nos-lieux/comptoir-c", "/images/comptoir-c-illustration.webp", ["/images/comptoir-c-logo.svg"]),
   company("Déchèt’Lab", "Déchèterie professionnelle · Beauvais", "https://eco-solidaire.fr/dechetlab", ref("MAHQEPH4wJU"), [ref("MAHQDsk7bis")]),
   company("BatiRE", "Réemploi des matériaux du bâtiment", "https://batire.groupemes.fr/", ref("batire-logo"), [ref("batire-logo")], "contain"),
 ];

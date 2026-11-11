@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Comptoir C</title>
+  <desc id="desc">Lettre C entourée d’un cercle jaune</desc>
+  <circle cx="80" cy="80" r="67" fill="#fff7df" stroke="#f5c518" stroke-width="12"/>
+  <path d="M117 48a49 49 0 1 0 8 59" fill="none" stroke="#f5c518" stroke-width="9" stroke-linecap="round"/>
+  <path d="M122 39l-2 26-24-10z" fill="#f5c518"/>
+  <text x="80" y="106" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="82" font-weight="800" fill="#263238">C</text>
+</svg>
