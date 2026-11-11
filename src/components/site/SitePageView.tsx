@@ -29,6 +29,7 @@ export default async function SitePageView({
   basePath,
   currentPath,
 }: Props) {
+  const navText = (label: string) => label === "Nos entreprises" ? "Entreprises du groupe" : label;
   const homeHref = basePath || "/";
   const contactPage = pages.find((entry) => entry.slug === "contact");
   const homeContactBlocks = page.isHome && !blocks.some((block) => block.type === "contactHub")
@@ -52,17 +53,17 @@ export default async function SitePageView({
 
   const nav: NavItem[] =
     site.navLinks.length > 0
-      ? site.navLinks.map((entry) => ({ label: entry.label, href: link(entry.href) }))
+      ? site.navLinks.map((entry) => ({ label: navText(entry.label), href: link(entry.href) }))
       : pages
           .filter((entry) => entry.inNav)
           .map((entry) => ({
-            label: entry.navLabel || entry.title,
+            label: navText(entry.navLabel || entry.title),
             href: pageHref(basePath, entry),
           }));
 
   const activities: NavItem[] = pages
     .filter((entry) => entry.inNav && !entry.isHome && entry.slug !== "contact" && !nav.some((item) => item.href === pageHref(basePath, entry)))
-    .map((entry) => ({ label: entry.navLabel || entry.title, href: pageHref(basePath, entry) }));
+    .map((entry) => ({ label: navText(entry.navLabel || entry.title), href: pageHref(basePath, entry) }));
   const legalPage = pages.find((entry) => entry.slug === "mentions-legales");
   const legal: NavItem | null = legalPage
     ? { label: legalPage.navLabel || legalPage.title, href: pageHref(basePath, legalPage) }

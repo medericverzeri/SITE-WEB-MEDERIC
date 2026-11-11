@@ -303,7 +303,7 @@ const encadrant: SeedSite = {
   navLinks: [
     { label: "Accueil", href: "/#accueil" },
     { label: "À propos de moi", href: "/#apropos" },
-    { label: "Nos entreprises", href: "/#entreprises" },
+    { label: "Entreprises du groupe", href: "/#entreprises" },
     { label: "Galerie", href: "/#galerie" },
     { label: "Contactez-nous", href: "/#contact" },
   ],
@@ -811,7 +811,7 @@ const developpement: SeedSite = {
   navLinks: [
     { label: "Accueil", href: "/#accueil" },
     { label: "À propos de moi", href: "/#apropos" },
-    { label: "Nos entreprises", href: "/#entreprises" },
+    { label: "Entreprises du groupe", href: "/#entreprises" },
     { label: "Galerie", href: "/#galerie" },
     { label: "Contactez-nous", href: "/#contact" },
   ],

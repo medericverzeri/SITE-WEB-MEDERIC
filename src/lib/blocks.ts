@@ -184,7 +184,7 @@ export const BLOCK_DEFS: BlockDef[] = [
   },
   {
     type: "companies",
-    label: "Nos entreprises (carrousel)",
+    label: "Entreprises du groupe (carrousel)",
     icon: "◫",
     description: "Cartes avec photo, logos, catégorie et lien vers chaque entreprise.",
     fields: [

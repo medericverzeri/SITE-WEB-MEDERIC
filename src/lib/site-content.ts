@@ -29,14 +29,14 @@ export const REQUEST_CONTACTS: RequestContact[] = [
 export const MAIN_NAVIGATION = [
   { label: "Accueil", href: "/" },
   { label: "À propos de moi", href: "/a-propos" },
-  { label: "Nos entreprises", href: "/nos-entreprises" },
+  { label: "Entreprises du groupe", href: "/nos-entreprises" },
   { label: "Galerie", href: "/galerie" },
   { label: "Contactez-nous", href: "/contact" },
 ];
 
 export const MULTIPAGE_SECTIONS = [
   { slug: "a-propos", title: "À propos de moi", types: ["aboutMe", "activities"], description: "Présentation et missions : encadrement, économie circulaire, réemploi et formation." },
-  { slug: "nos-entreprises", title: "Nos entreprises", types: ["companies"], description: "Découvrez les entreprises du groupe, leurs activités et leurs sites officiels." },
+  { slug: "nos-entreprises", title: "Entreprises du groupe", types: ["companies"], description: "Découvrez les entreprises du groupe MES, leurs activités et leurs sites officiels." },
   { slug: "galerie", title: "Galerie", types: ["albums"], description: "Parcourez les albums photo du Déchèt’Lab et des chantiers de dépose préservante." },
   { slug: "contact", title: "Contactez-nous", types: ["contactHub"], description: "Choisissez le bon interlocuteur et consultez les informations pratiques du Déchèt’Lab." },
 ];
