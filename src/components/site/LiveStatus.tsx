@@ -4,6 +4,7 @@ import { useEffect, useState, type CSSProperties } from "react";
 import type { ScheduleData } from "@/db/schema";
 import { computeStatus, frTime, groupOpenDays, type OpenStatus } from "@/lib/hours";
 import { Clock } from "./Icons";
+import { resolvePortrait } from "@/lib/portrait";
 
 type StatusInput = {
   schedule: ScheduleData;
@@ -47,6 +48,7 @@ export function PortraitFrame({
 }: PortraitProps) {
   const live = useLiveStatus(status);
   const color = live.open ? "#16a34a" : "#dc2626";
+  const portrait = resolvePortrait(portraitUrl);
 
   return (
     <div
@@ -57,7 +59,13 @@ export function PortraitFrame({
         <span className="portrait-orbit" aria-hidden="true" />
         {portraitUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img className="home-portrait" src={portraitUrl} alt={portraitAlt || name} />
+          <img
+            className="home-portrait"
+            src={portrait.src}
+            srcSet={portrait.srcSet}
+            sizes={portrait.sizes}
+            alt={portraitAlt || name}
+          />
         ) : (
           <span className="portrait-initials" aria-hidden="true">
             {initials}

@@ -2806,7 +2806,7 @@ section[id] {
   position: relative;
   isolation: isolate;
   aspect-ratio: 1;
-  max-height: 520px;
+  max-height: 460px;
   margin-inline: auto;
   overflow: hidden;
   border-radius: var(--radius) calc(var(--radius) * 2.6) var(--radius) var(--radius);

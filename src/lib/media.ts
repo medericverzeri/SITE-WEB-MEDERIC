@@ -1,7 +1,7 @@
 /* Généré à partir des médias du site de référence (hébergés dans /public/images). */
 export const REF_IMAGES: Record<string, string> = {
   "MAHQDsk7bis": "/images/ref/MAHQDsk7bis.webp",
-  "MAHQDsvF0sc": "/images/ref/MAHQDsvF0sc.webp",
+  "MAHQDsvF0sc": "/images/portrait-mederic.webp",
   "MAHQDlSEorY": "/images/ref/MAHQDlSEorY.webp",
   "MAHQEGuUAIw": "/images/ref/MAHQEGuUAIw.webp",
   "MAHQEPH4wJU": "/images/ref/MAHQEPH4wJU.webp",

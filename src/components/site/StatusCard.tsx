@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { computeStatus, DAY_KEYS, DAY_LABELS, formatDaySchedule, normalizeSchedule } from "@/lib/hours";
 import type { ScheduleData } from "@/db/schema";
 import type { CSSProperties } from "react";
+import { resolvePortrait } from "@/lib/portrait";
 
 type Props = {
   photoUrl: string;
@@ -51,12 +52,19 @@ export default function StatusCard({
     closed: closedNote,
   });
   const normalized = normalizeSchedule(schedule);
+  const portrait = resolvePortrait(photoUrl);
 
   return (
     <div className="status-card" style={{ "--status": status.open ? "#16a34a" : "#dc2626" } as CSSProperties}>
       <div className="status-photo">
         {photoUrl ? (
-          <img src={photoUrl} alt={photoAlt || `${name} — ${role}`} loading="lazy" />
+          <img
+            src={portrait.src}
+            srcSet={portrait.srcSet}
+            sizes={portrait.sizes}
+            alt={photoAlt || `${name} — ${role}`}
+            loading="lazy"
+          />
         ) : (
           <div className="status-photo-fallback" aria-hidden="true">
             {name.slice(0, 1) || "?"}
