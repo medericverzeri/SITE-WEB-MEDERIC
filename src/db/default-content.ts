@@ -231,9 +231,13 @@ const companiesBlock = (): SeedBlock => ({
   data: {
     anchor: "entreprises",
     number: "03",
-    title: "Nos entreprises",
+    title: "Les entreprises du groupe MES",
     subtitle:
       "Un réseau de structures d’économie sociale et solidaire réunies autour de l’insertion, du réemploi et du territoire. Cliquez sur une carte pour découvrir chaque entreprise.",
+    groupName: "Groupe MES",
+    groupLogoUrl: "/images/groupe-mes-logo.webp",
+    groupUrl: "https://eco-solidaire.fr/groupe-mes",
+    groupIntro: "La Maison d’économie solidaire rassemble des structures engagées pour l’insertion, le réemploi et l’économie circulaire sur le territoire.",
     items: COMPANIES,
   },
 });

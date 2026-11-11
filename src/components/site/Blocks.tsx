@@ -303,10 +303,25 @@ function Block({ block, link, site, pageSlug, primaryHeading = false }: BlockPro
         imageFit: entry.imageFit === "contain" ? "contain" : "cover",
         logos: [entry.logo1, entry.logo2].filter((logo): logo is string => Boolean(logo)),
       }));
+      const currentTitle = str(d, "title");
+      const title = !currentTitle || currentTitle === "Nos entreprises" ? "Les entreprises du groupe MES" : currentTitle;
+      const groupName = str(d, "groupName") || "Groupe MES";
+      const groupLogo = str(d, "groupLogoUrl") || "/images/groupe-mes-logo.webp";
+      const groupIntro = str(d, "groupIntro") || "La Maison d’économie solidaire rassemble des structures engagées pour l’insertion, le réemploi et l’économie circulaire sur le territoire.";
+      const groupUrl = str(d, "groupUrl") || "https://eco-solidaire.fr/groupe-mes";
       return (
         <section className="chapter chapter--companies" id={str(d, "anchor") || undefined}>
           <div className="wrap">
-            <Chapter primary={primaryHeading} number={str(d, "number")} title={str(d, "title")} subtitle={str(d, "subtitle")} />
+            <div className="mes-group-intro">
+              <a className="mes-group-logo" href={groupUrl} target="_blank" rel="noopener noreferrer" aria-label={`${groupName} — ouvrir le site du groupe`}>
+                <img src={groupLogo} alt={`Logo ${groupName}`} loading="lazy" />
+              </a>
+              <div>
+                <span className="mes-group-kicker">{groupName}</span>
+                <p>{groupIntro}</p>
+              </div>
+            </div>
+            <Chapter primary={primaryHeading} number={str(d, "number")} title={title} subtitle={str(d, "subtitle")} />
             <CompanyCarousel companies={companies} />
           </div>
         </section>

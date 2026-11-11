@@ -322,6 +322,41 @@
   .site-header--refined *, .contact-resources * { transition: none !important; }
 }
 
+/* Présentation du groupe MES au-dessus du carrousel. */
+.mes-group-intro {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(1.6rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+  border: 1px solid color-mix(in srgb, var(--brand) 18%, var(--line));
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--card), color-mix(in srgb, var(--brand-soft) 45%, var(--card)));
+  box-shadow: 0 16px 40px -32px rgba(13, 27, 42, 0.24);
+}
+.mes-group-logo {
+  display: grid;
+  place-items: center;
+  min-height: 118px;
+  padding: 0.55rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mes-group-logo:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.mes-group-logo img { width: 100%; max-width: 128px; max-height: 130px; object-fit: contain; }
+.mes-group-kicker { display: block; font-family: var(--font-display), sans-serif; font-size: clamp(1.25rem, 2.4vw, 1.7rem); font-weight: 800; letter-spacing: -0.035em; color: var(--brand-ink); margin-bottom: 0.45rem; }
+.mes-group-intro p { color: var(--muted); font-size: 0.93rem; line-height: 1.65; max-width: 70ch; }
+@media (max-width: 600px) {
+  .mes-group-intro { grid-template-columns: 92px minmax(0, 1fr); gap: 1rem; padding: 0.9rem; }
+  .mes-group-logo { min-height: 96px; }
+  .mes-group-logo img { max-width: 80px; max-height: 100px; }
+  .mes-group-intro p { font-size: 0.82rem; }
+}
+
 /* Une page par onglet : titre principal et orientation des demandes. */
 .chapter-heading h1 {
   font-family: var(--font-display), sans-serif;

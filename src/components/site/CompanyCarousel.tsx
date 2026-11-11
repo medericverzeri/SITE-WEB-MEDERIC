@@ -84,7 +84,7 @@ export default function CompanyCarousel({ companies }: { companies: Company[] })
   const pad = (value: number) => String(value).padStart(2, "0");
 
   return (
-    <div className="company-carousel" role="region" aria-roledescription="carrousel" aria-label="Nos entreprises">
+    <div className="company-carousel" role="region" aria-roledescription="carrousel" aria-label="Entreprises du groupe MES">
       <div className="company-window">
         <div className="company-track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {slides.map((slide, index) => (
