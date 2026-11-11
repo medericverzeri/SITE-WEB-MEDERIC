@@ -1,7 +1,8 @@
 "use client";
 
-import { useActionState, useEffect, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { submitContactAction, type ContactState } from "@/app/actions";
+import { buildDirectEmail } from "@/lib/direct-email";
 
 const initialState: ContactState = { status: "idle", message: "" };
 
@@ -28,13 +29,58 @@ export default function ContactForm({
 }: Props) {
   const [state, formAction, pending] = useActionState(submitContactAction, initialState);
   const [subject, setSubject] = useState(presetSubject);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [directMessage, setDirectMessage] = useState("");
+  const [directText, setDirectText] = useState("");
 
   useEffect(() => {
     if (presetSubject) setSubject(presetSubject);
   }, [presetSubject]);
 
+  const prepareDirectEmail = () => {
+    const form = formRef.current;
+    if (!form || !form.reportValidity()) return null;
+    const data = new FormData(form);
+    const value = (key: string) => String(data.get(key) ?? "");
+    if (!recipient) {
+      setDirectMessage("L’adresse de réception n’est pas configurée. Utilisez l’enregistrement dans l’admin.");
+      return null;
+    }
+    return buildDirectEmail({
+      recipient,
+      siteName,
+      pageSlug,
+      name: value("name"),
+      email: value("email"),
+      phone: value("phone"),
+      organisation: value("organisation"),
+      subject: value("subject"),
+      body: value("body"),
+    });
+  };
+
+  const handleDirectSend = () => {
+    const direct = prepareDirectEmail();
+    if (!direct) return;
+    setDirectText(direct.text);
+    setDirectMessage("Votre messagerie va s’ouvrir avec le message prérempli. Cliquez sur Envoyer dans celle-ci pour terminer.");
+    window.location.href = direct.href;
+  };
+
+  const handleCopy = async () => {
+    const direct = prepareDirectEmail();
+    if (!direct) return;
+    setDirectText(direct.text);
+    try {
+      await navigator.clipboard.writeText(direct.text);
+      setDirectMessage(`Message copié. Collez-le dans un nouvel e-mail adressé à ${recipient}.`);
+    } catch {
+      setDirectMessage("Sélectionnez le texte ci-dessous puis copiez-le manuellement dans votre messagerie.");
+    }
+  };
+
   return (
-    <form action={formAction} noValidate>
+    <form ref={formRef} action={formAction} noValidate>
       <h3 className="h3" style={{ marginBottom: "0.9rem" }}>
         {formTitle}
       </h3>
@@ -106,7 +152,9 @@ export default function ContactForm({
           <p style={{ marginTop: "0.45rem", fontSize: "0.86rem" }}>
             {state.emailSent
               ? `Un courriel vient d'être envoyé à ${state.recipient}.`
-              : "Votre demande est enregistrée dans notre espace de gestion."}
+              : state.notificationStatus === "no-api-key"
+                ? "Votre demande est enregistrée dans notre espace de gestion. La notification automatique par e-mail n’est pas activée."
+                : "Votre demande est enregistrée dans notre espace de gestion, mais la notification par e-mail n’a pas pu être transmise."}
             {state.mailtoHref ? (
               <>
                 {" "}
@@ -126,11 +174,36 @@ export default function ContactForm({
         </p>
       ) : null}
 
+      <div className="direct-email-panel">
+        <strong>Envoi direct à {recipient || "votre messagerie"}</strong>
+        <p className="hint">
+          Sans configuration technique : votre messagerie s’ouvrira avec l’adresse, l’objet et le message déjà remplis.
+          Vous devrez encore cliquer sur <b>Envoyer</b> dans votre messagerie.
+        </p>
+        <button type="button" className="btn btn-accent btn-block" onClick={handleDirectSend}>
+          Ouvrir mon e-mail pour l’envoyer
+        </button>
+        <button type="button" className="btn-link direct-copy-button" onClick={handleCopy}>
+          Copier le message pour une messagerie web
+        </button>
+        {directMessage ? (
+          <p className="direct-email-status" role="status">{directMessage}</p>
+        ) : null}
+        {directText ? (
+          <label className="direct-email-text">
+            Texte à copier si nécessaire
+            <textarea readOnly value={directText} onFocus={(event) => event.currentTarget.select()} />
+          </label>
+        ) : null}
+      </div>
+
+      <p className="direct-email-separator">ou enregistrer la demande dans l’espace admin</p>
+
       <button
         type="submit"
         className="btn btn-primary btn-block"
         disabled={pending}
-        style={{ marginTop: "0.9rem" }}
+        style={{ marginTop: "0.4rem" }}
       >
         {pending ? "Envoi en cours…" : submitLabel}
       </button>
