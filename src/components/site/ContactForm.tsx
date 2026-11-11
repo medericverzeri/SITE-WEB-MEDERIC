@@ -152,9 +152,7 @@ export default function ContactForm({
           <p style={{ marginTop: "0.45rem", fontSize: "0.86rem" }}>
             {state.emailSent
               ? `Un courriel vient d'être envoyé à ${state.recipient}.`
-              : state.notificationStatus === "no-api-key"
-                ? "Votre demande est enregistrée dans notre espace de gestion. La notification automatique par e-mail n’est pas activée."
-                : "Votre demande est enregistrée dans notre espace de gestion, mais la notification par e-mail n’a pas pu être transmise."}
+              : "Votre demande est enregistrée dans notre espace de gestion."}
             {state.mailtoHref ? (
               <>
                 {" "}
