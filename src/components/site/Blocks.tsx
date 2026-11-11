@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ContentBlock, Site } from "@/db/schema";
 import { items, lines, paragraphs, str } from "@/lib/blocks";
-import ContactForm from "./ContactForm";
 import StatusCard from "./StatusCard";
 import { OpeningStrip, PortraitFrame } from "./LiveStatus";
 import CompanyCarousel, { type Company } from "./CompanyCarousel";
@@ -369,8 +368,6 @@ function Block({ block, link, site, pageSlug, primaryHeading = false }: BlockPro
           <div className="wrap">
             <Chapter primary={primaryHeading} number={str(d, "number")} title={str(d, "title")} />
             <ContactHub
-              siteId={site.id}
-              pageSlug={pageSlug}
               recipient={recipient}
               siteName={site.name}
               portraitUrl={portrait}
@@ -382,9 +379,6 @@ function Block({ block, link, site, pageSlug, primaryHeading = false }: BlockPro
               choice={str(d, "choice")}
               invitation={str(d, "invitation")}
               routingTitle={str(d, "routingTitle")}
-              formIntro={str(d, "formIntro")}
-              formTitle={str(d, "formTitle")}
-              successMessage={str(d, "successMessage")}
               topics={topics}
               channels={channels}
               contacts={contacts}
@@ -803,7 +797,6 @@ function Block({ block, link, site, pageSlug, primaryHeading = false }: BlockPro
     }
 
     case "contact": {
-      const showForm = str(d, "showForm") !== "no";
       return (
         <section className="section section--soft" id="contact">
           <div className="wrap">
@@ -812,19 +805,7 @@ function Block({ block, link, site, pageSlug, primaryHeading = false }: BlockPro
               subtitle={str(d, "subtitle")}
               eyebrow="Contact"
             />
-            <div className="contact-grid">
-              {showForm ? (
-                <div className="contact-panel">
-                  <ContactForm
-                    siteId={site.id}
-                    pageSlug={pageSlug}
-                    formTitle={str(d, "formTitle") || "Formulaire de contact"}
-                    successMessage={str(d, "successMessage")}
-                    recipient={site.notificationEmail || site.contactEmail}
-                    siteName={site.name}
-                  />
-                </div>
-              ) : null}
+            <div className="contact-grid" style={{ gridTemplateColumns: "minmax(0, 1fr)" }}>
               <div className="contact-panel">
                 <h3 className="h3">Nous joindre directement</h3>
                 <p className="admin-sub" style={{ marginTop: "0.3rem", color: "var(--muted)" }}>

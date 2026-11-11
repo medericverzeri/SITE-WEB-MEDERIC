@@ -1,7 +1,6 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
-import ContactForm from "./ContactForm";
+import { useId, useState } from "react";
 import { ArrowRight, ArrowUpRight, ChannelIcon, Mail, Phone } from "./Icons";
 import type { ContactTopic } from "@/lib/dechetlab-info";
 import type { RequestContact } from "@/lib/site-content";
@@ -18,8 +17,6 @@ export type Channel = {
   button2: string;
 };
 type Props = {
-  siteId: number;
-  pageSlug: string;
   recipient: string;
   siteName: string;
   portraitUrl: string;
@@ -31,35 +28,23 @@ type Props = {
   choice: string;
   invitation: string;
   routingTitle: string;
-  formIntro: string;
-  formTitle: string;
-  successMessage: string;
   topics: Topic[];
   channels: Channel[];
   contacts: RequestContact[];
 };
 
 const flat = (value: string) => value.replace(/\s+/g, " ").trim();
+const questionHref = (recipient: string, title: string) =>
+  `mailto:${recipient}?subject=${encodeURIComponent(`Question : ${flat(title)}`)}`;
 
 export default function ContactHub(props: Props) {
-  const [topic, setTopic] = useState("");
   const [selected, setSelected] = useState(() => {
     const depot = props.topics.findIndex((entry) => entry.id === "depot");
     return depot >= 0 ? depot : props.topics.findIndex((entry) => entry.body && entry.action !== "link");
   });
   const uid = useId();
-  const formRef = useRef<HTMLDivElement>(null);
   const contacts = props.contacts.filter((contact) => contact.name || contact.email || contact.phone);
   const channels = contacts.length > 0 ? props.channels.filter((channel) => channel.kind === "web") : props.channels;
-
-  const chooseTopic = (title: string) => {
-    setTopic(flat(title));
-    window.requestAnimationFrame(() => {
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      formRef.current?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "center" });
-      formRef.current?.querySelector<HTMLTextAreaElement>("textarea")?.focus({ preventScroll: true });
-    });
-  };
 
   return (
     <div className="contact-hub">
@@ -148,7 +133,10 @@ export default function ContactHub(props: Props) {
                     aria-expanded={hasInfo ? selected === index : undefined}
                     aria-controls={hasInfo ? `${uid}-panel-${index}` : undefined}
                     data-active={hasInfo && selected === index}
-                    onClick={() => hasInfo ? setSelected(index) : chooseTopic(entry.title)}
+                    onClick={() => {
+                      if (hasInfo) setSelected(index);
+                      else if (props.recipient) window.location.href = questionHref(props.recipient, entry.title);
+                    }}
                   >
                     {content}
                   </button>
@@ -231,9 +219,11 @@ export default function ContactHub(props: Props) {
                         {entry.linkLabel || "En savoir plus"}<ArrowUpRight width={16} height={16} />
                       </a>
                     ) : null}
-                    <button type="button" className="topic-question-link" onClick={() => chooseTopic(entry.title)}>
-                      Une question sur ce sujet ?<ArrowRight width={15} height={15} />
-                    </button>
+                    {props.recipient ? (
+                      <a className="topic-question-link" href={questionHref(props.recipient, entry.title)}>
+                        Une question sur ce sujet ?<ArrowRight width={15} height={15} />
+                      </a>
+                    ) : null}
                   </div>
                 </section>
               );
@@ -283,18 +273,7 @@ export default function ContactHub(props: Props) {
           </div>
         ) : null}
 
-        <div ref={formRef} className="contact-form-wrap" id="formulaire-contact">
-          {props.formIntro ? <p className="contact-form-intro">{props.formIntro}</p> : null}
-          <ContactForm
-            siteId={props.siteId}
-            pageSlug={props.pageSlug}
-            formTitle={props.formTitle || "Écrivez-nous"}
-            successMessage={props.successMessage}
-            recipient={props.recipient}
-            siteName={props.siteName}
-            presetSubject={topic ? `Question : ${topic}` : ""}
-          />
-        </div>
+
       </div>
       </div>
     </div>

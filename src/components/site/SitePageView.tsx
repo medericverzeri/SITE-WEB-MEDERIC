@@ -5,6 +5,7 @@ import SiteHeader, { type NavItem } from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import { BlockList } from "./Blocks";
 import HoursTicker from "./HoursTicker";
+import { getPageWithBlocks } from "@/lib/data";
 
 export function pageHref(basePath: string, page: { slug: string; isHome: boolean }): string {
   if (page.isHome) return basePath || "/";
@@ -20,7 +21,7 @@ type Props = {
   currentPath: string;
 };
 
-export default function SitePageView({
+export default async function SitePageView({
   site,
   pages,
   page,
@@ -30,6 +31,10 @@ export default function SitePageView({
 }: Props) {
   const homeHref = basePath || "/";
   const contactPage = pages.find((entry) => entry.slug === "contact");
+  const homeContactBlocks = page.isHome && !blocks.some((block) => block.type === "contactHub")
+    ? (await getPageWithBlocks(site.id, contactPage?.slug ?? "contact"))?.blocks.filter((block) => block.type === "contactHub") ?? []
+    : [];
+  const displayedBlocks = [...blocks, ...homeContactBlocks];
   const contactHref = contactPage ? pageHref(basePath, contactPage) : `${basePath}/contact`;
 
   // "!/" = lien absolu depuis la racine (pour passer d'un site à l'autre)
@@ -92,7 +97,7 @@ export default function SitePageView({
       />
       <HoursTicker site={site} ctaHref={link(site.ctaHref || "/contact")} />
       <main id="contenu">
-        <BlockList blocks={blocks} link={link} site={site} pageSlug={page.slug} />
+        <BlockList blocks={displayedBlocks} link={link} site={site} pageSlug={page.slug} />
       </main>
       <SiteFooter
         site={site}
