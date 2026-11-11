@@ -1,0 +1,538 @@
+{
+  "format": "site-mederic-vercel-complet-v1",
+  "createdAt": "2026-11-11T11:58:18.629910+00:00",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "97d925194c2423ebd433724e8f374e6a1e9b9925c675148acc4df00ce20c93ee"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "a819f698aa2a88ce64fe7093756f411d2916a0804a851e824a940d567b94a18c"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "6ff5e83df5ad470f77e7c003c6eecd926a24b39d56d64933fdc5595c6a8dc53d"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "d6272d380229562d6af2636cfaa9c05773a970338fef643c57b2ab4b4372e331"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "1e143c4bb37d960b3f5fa1c8fa414fb9d85c6693c31471bf6913a9935195383d"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "b8cd36495468ea54e029eb4b2e0e98f0feff6f95d6513e70db37a71c0e3bfba4"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "c971926abccc506da1532570c55a95d5298b606901c4801866a4862969c13302"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha256": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651"
+    },
+    {
+      "path": "drizzle.vercel.ts",
+      "sha256": "95394f5ca87174ac5dea7f537e9e603b1df26ec9dce6464a99f45566e4ccf5b4"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "6a46f0be5ac3600bdc683ad93ee831249ab4373d5b018ea7327e485b5da379d8"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "5c2d51b8b64662cbaae7fe20aaffde34ede9e3ec496e242ee8c6940ac96ad7e6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9389c9536a6d75b8ee785afe4c6fe0a0949e312aa0f541ed965834fb6eefe181"
+    },
+    {
+      "path": "LIRE-EN-PREMIER.md",
+      "sha256": "c8464eb9493a892564acb14338ea3edc05e788330b886d24d1f5b245555ef34a"
+    },
+    {
+      "path": "DEPLOIEMENT_VERCEL.md",
+      "sha256": "87504ef108095e3f5ad00e998967b30c0c2fb1e7480a96eff76ea03e6dd03283"
+    },
+    {
+      "path": "REPARATION_VERCEL.md",
+      "sha256": "f0777360e0aee2daa9a3d6ad8f6bfa575f5ae2d996e53366e86ffea4263f4099"
+    },
+    {
+      "path": "src/db/bootstrap.sql",
+      "sha256": "70f212613181195df0921a284f3a00dde91128518790af59f83539d7cca08865"
+    },
+    {
+      "path": "src/app/[site]/[slug]/page.tsx",
+      "sha256": "97348b3d66319d6f47a8e79f4a697de4edde6cbec8bbf163c5db96ec3c0082e7"
+    },
+    {
+      "path": "src/app/[site]/page.tsx",
+      "sha256": "8bbecb6fed4592a628e9030130db1c2f8bf4413f2bc3c07d99372812da887156"
+    },
+    {
+      "path": "src/app/actions.ts",
+      "sha256": "ee2c4c75b84cc3cc410ce6abeabc68a48d550bdb132b381a743cca1e121f8af8"
+    },
+    {
+      "path": "src/app/admin/(dash)/aide/page.tsx",
+      "sha256": "f167bd4254301e0acc23a8b5e2092a94b4995fced7faa4d833a8920077ae8c5a"
+    },
+    {
+      "path": "src/app/admin/(dash)/layout.tsx",
+      "sha256": "6ed691ae1d71b32c650f6490b6f5a9d19ebc8479086e94bcc363b89f7eeb0889"
+    },
+    {
+      "path": "src/app/admin/(dash)/messages/page.tsx",
+      "sha256": "0fd6ba292c737d13d469f5bfacd3a429d149e4dd1140d2ab761e41eb60eed2c1"
+    },
+    {
+      "path": "src/app/admin/(dash)/page.tsx",
+      "sha256": "90bffc6ac8373d46f57043fb58afecd96f30e988f2cd66540219e5de6faa039d"
+    },
+    {
+      "path": "src/app/admin/(dash)/site/[siteKey]/page.tsx",
+      "sha256": "6d5b54adbe79a6c3c474cdd70274badf3db74cb4cade76b0412116cec93662c7"
+    },
+    {
+      "path": "src/app/admin/(dash)/site/[siteKey]/pages/[pageId]/page.tsx",
+      "sha256": "99a441075da4405c19866296a06b08f5507eaa2cf9a53528c08cacf2b5e3dd35"
+    },
+    {
+      "path": "src/app/admin/(dash)/site/[siteKey]/pages/page.tsx",
+      "sha256": "47bb2771a37a54b0fd1c8aec1da84cc166114ac68adffbd0f4b1c74dcdfffe27"
+    },
+    {
+      "path": "src/app/admin/actions.ts",
+      "sha256": "a55cb37ee4d84dd7932db2bb3f5dc90367310c5e286bf544c84c73401f6d3f2f"
+    },
+    {
+      "path": "src/app/admin/login/page.tsx",
+      "sha256": "dd71de2c8575e99bd9f2d757e2c5dfbd21ef19afae2946decdc54fdb76b30f73"
+    },
+    {
+      "path": "src/app/api/contact/route.ts",
+      "sha256": "2229c5932f341346883bccac8ddca1950696f557712dc06a8cf54120918ca23c"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "sha256": "617a2d2ae4a941c8d06f3ac9b8622b68c046dfd4263346915c5641f21773bd88"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "c790470ce007588942a59525de993e772f2483617c095b40817a41d132a3da5a"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "06f5bdc680731708e833462619b1ba584ac1505c15bc75a688a492d58479f487"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "1d9638811e444627245fc97668e3a92effa7229c5dfd7a977df510cc534c8423"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "63039d4bbb55a3dbd2b380ec4b3017615c6056924798765a9c04a04d0ebfa440"
+    },
+    {
+      "path": "src/app/refinements.css",
+      "sha256": "93c9161ad872ae4e05fd68fcd4346518ecf22ed244fdb293caf91e9a4daa33a0"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "sha256": "3677d5353e1906d04de729b8cf49f494af2fd39c205e517b02197b3721014f41"
+    },
+    {
+      "path": "src/components/admin/AdminFields.tsx",
+      "sha256": "4a95f036ce94599a30d830eb141786c1b0dacaa9e929e2517df935d87500fe8d"
+    },
+    {
+      "path": "src/components/admin/AdminNav.tsx",
+      "sha256": "b0f895cf8bf94219c47ec96e2e08df24509de3bf3630a9ccd5fac4d6c6ec1677"
+    },
+    {
+      "path": "src/components/admin/BlockEditor.tsx",
+      "sha256": "5c1bd4f19d17ce0bf8f225c9a94c51d04b7aa10c2bfc551cbcee2feb6b84f742"
+    },
+    {
+      "path": "src/components/admin/ConfirmSubmit.tsx",
+      "sha256": "4615b998b69d4bc5d27b1e1370bfc026929bbf65c339af15bdc6be1f7bff48ba"
+    },
+    {
+      "path": "src/components/admin/PageMetaForm.tsx",
+      "sha256": "f30e13d0915ccc7f337acf45f1e70c4a98bbb002b74351dc3cc0a38024d5e02c"
+    },
+    {
+      "path": "src/components/admin/ScheduleEditor.tsx",
+      "sha256": "c6115a98da3a268c9c6f248026caae70b0f7c691d45d94286f1ce63cd4614a84"
+    },
+    {
+      "path": "src/components/admin/SettingsForm.tsx",
+      "sha256": "d946d33eeab977d73d058edea4b190cefe578a09fb4500c967b2f01952ff736e"
+    },
+    {
+      "path": "src/components/site/AlbumGallery.tsx",
+      "sha256": "98a1b7b4f2f87b0072178e05bc6a8d8edef79c196449a1929e8425e821a2f56a"
+    },
+    {
+      "path": "src/components/site/Blocks.tsx",
+      "sha256": "9c44bd6efe58da4acbebe7285e267576f3bedae60eda8bb4769be2f00e1bc33e"
+    },
+    {
+      "path": "src/components/site/CompanyCarousel.tsx",
+      "sha256": "c20eb59546d2d1638be23243719eb7149a3fcc72115adc16a58e30160f721753"
+    },
+    {
+      "path": "src/components/site/ContactForm.tsx",
+      "sha256": "c9616b894e7539357feb6bb412a63183d8e6e329e17a7f795fd907c2915b5328"
+    },
+    {
+      "path": "src/components/site/ContactHub.tsx",
+      "sha256": "e8d01ad7f5155a77aa8e1455c0fcf40bc2b127a309dc73229b7d2f2fd7073d08"
+    },
+    {
+      "path": "src/components/site/HoursTicker.tsx",
+      "sha256": "0f9ef1424cbda3a4d94ba4fc3d379f4f7340401137d7bd963c81c8a5f461f905"
+    },
+    {
+      "path": "src/components/site/Icons.tsx",
+      "sha256": "0c83ec313b29b969adf017f7d2453b7db0b186fb7be7bdf6aa1278b87cf44589"
+    },
+    {
+      "path": "src/components/site/LiveStatus.tsx",
+      "sha256": "ee7c1decd591ec5556941e08c28c53389da79d52afead5b8b9e4c9e64d16fa6d"
+    },
+    {
+      "path": "src/components/site/ReadingComfort.tsx",
+      "sha256": "f72b8c97ee073c5c17aa29a38f7fec34e9c9422c685b58abb7d2a3a18116828e"
+    },
+    {
+      "path": "src/components/site/SiteFooter.tsx",
+      "sha256": "d79bdd190dcdae0ea84b7be306c5967ed3190b3a5672b444cce7adde872b0dbe"
+    },
+    {
+      "path": "src/components/site/SiteHeader.tsx",
+      "sha256": "340bcd613c6df943977f7b5626afa84ade821bfa46d3daecf87c86da7592f0e4"
+    },
+    {
+      "path": "src/components/site/SitePageView.tsx",
+      "sha256": "636c929d2de0251bf74c39b83c038b9d0329008a07a2e0e1b17872bb5ffc6a83"
+    },
+    {
+      "path": "src/components/site/StatusCard.tsx",
+      "sha256": "befb98904bd37c4860846b75b8a5492a43908f08d847c1e9244c69d77abf1b13"
+    },
+    {
+      "path": "src/db/bootstrap.ts",
+      "sha256": "726d9fe285b127682fdafd5a8155998748b03e772a5131c25a6b4185e5b5ec03"
+    },
+    {
+      "path": "src/db/content-updates.ts",
+      "sha256": "a898e77ab585f1ed90bad019339f7dec87c849a0f29bec4264a7dd11b31c79f4"
+    },
+    {
+      "path": "src/db/dechetlab-content.ts",
+      "sha256": "7234dc28c9ed377a19cf425246b26a00bd0b8447342c0ca51cc2f5f0de9c1fa9"
+    },
+    {
+      "path": "src/db/default-content.ts",
+      "sha256": "07c419f09932a413bfb3e8f48d24da4bd91359cd27393ce44023d1ec6b74b579"
+    },
+    {
+      "path": "src/db/index.ts",
+      "sha256": "44d8e984cf4d238facb3e984c6a2ffa7abfca11768da1304ff439d2b7246990b"
+    },
+    {
+      "path": "src/db/multipage-defaults.ts",
+      "sha256": "92ebd841ad0656c3a082dc9f3e6fa1c08cc2a9d2247b98f36c91116eee97dc14"
+    },
+    {
+      "path": "src/db/multipage-update.ts",
+      "sha256": "3cda26af958f7b39a0aaabe00c7388adcd0152d2f01b15d0e23029ce02ce6a6b"
+    },
+    {
+      "path": "src/db/schema.ts",
+      "sha256": "80549d2f1686d9a5548a4ad19a3dff03383501b3b80d23569508190c46a7c1cf"
+    },
+    {
+      "path": "src/db/seed.ts",
+      "sha256": "92c4feb615a3334a2c30a930f257530acd11a77b789050f3fc79a5133b6d63be"
+    },
+    {
+      "path": "src/db/valodepot-update.ts",
+      "sha256": "095cccc6631608c485f600bea3fa936dfdd64bd36ce99acb08e26279484951b5"
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "sha256": "80939f5575189e0845d7443fa3b6e561ca8bccee162833c25f3ec7367f121f66"
+    },
+    {
+      "path": "src/lib/blocks.ts",
+      "sha256": "543384003b290f62b2ebf143d6b3a8d7e7c4cd872bba50e2a09765bf515837bd"
+    },
+    {
+      "path": "src/lib/contact.ts",
+      "sha256": "bd66a6a834fc46257009e4b1cba9bcfdb5d6e2cd1e613d377a06e8b63ecf9083"
+    },
+    {
+      "path": "src/lib/data.ts",
+      "sha256": "e26677084a6f44dcacf62cac51734bbfe208ac9718418887987a1680798b2001"
+    },
+    {
+      "path": "src/lib/dechetlab-info.ts",
+      "sha256": "ee79939c6a60fd1325453aafaa8dd0a8dd27c1020ab84181598a3deb4b898767"
+    },
+    {
+      "path": "src/lib/hours.ts",
+      "sha256": "d72af9e8c8e60abb69a0feaa9788e7830ed20301ce77d3f73973094db57810da"
+    },
+    {
+      "path": "src/lib/images.ts",
+      "sha256": "5adedc230dce41f6edad015c1ed08acff84500388fa23b7b8a44aec4c574a949"
+    },
+    {
+      "path": "src/lib/media.ts",
+      "sha256": "d6ddeb6f4643f2b781a1863c95a05ca929c37bb693e16c75a63ba00a8cdf525b"
+    },
+    {
+      "path": "src/lib/notify.ts",
+      "sha256": "ac232cba3d09fb990787bb32fb7c2e6f30fd1b8da62de99ccdb4389c86a2316d"
+    },
+    {
+      "path": "src/lib/site-content.ts",
+      "sha256": "b3b09fdf53c37f21a3c837ad4535ee0a85eb84ad3306945345732418ae3d769c"
+    },
+    {
+      "path": "src/lib/theme.ts",
+      "sha256": "9e033642265909176220da2fb71d78e43522cd667d321d7b09a9fc11fbfc569b"
+    },
+    {
+      "path": "scripts/check-deployment.mjs",
+      "sha256": "4d20ab526b25468fa5480332eb4ad7efef3a47fd96254026add53fd18b30c448"
+    },
+    {
+      "path": "scripts/export-vercel.py",
+      "sha256": "f79fbe1fc9696891085f276fadde57b04c94ec70f18d691b72059753ae90dd47"
+    },
+    {
+      "path": "public/images/partners/batire_logo.webp",
+      "sha256": "ac183d63c7edd4a5fa65b2083f3050be20117b59c5655cee42772d0c3f5351d5"
+    },
+    {
+      "path": "public/images/partners/comptoir_c.webp",
+      "sha256": "411aec97a70e4494342e71d3fe7b6cbde6b98c82a6c7fcdec5fab0b5249b24db"
+    },
+    {
+      "path": "public/images/ref/MAGTteXqos0.webp",
+      "sha256": "e9efc39dee8d36bd10b6235e74bb6841b93275d00de93df0210e62a3df5c2737"
+    },
+    {
+      "path": "public/images/ref/MAGz2E_p3C0.webp",
+      "sha256": "ed81a2a43dfe2035e54251a3cdc82f38e99205524e452122104a895d8469a8c5"
+    },
+    {
+      "path": "public/images/ref/MAHGvXuj_Uc.webp",
+      "sha256": "325a98483fbe506790b8a0482f5b81a12709e570a3bee97eb3b8265e6d013d0e"
+    },
+    {
+      "path": "public/images/ref/MAHH90MKXkY.webp",
+      "sha256": "ca5606d86ba03188337b99002c48596b7a88647867379309cc57693d0201b054"
+    },
+    {
+      "path": "public/images/ref/MAHH99XUvjk.webp",
+      "sha256": "3121055091a4dcece2fc4638795b0dbe6b22cdcf764201432afd24e206cc0bb2"
+    },
+    {
+      "path": "public/images/ref/MAHH9Xka0ns.webp",
+      "sha256": "3a0bb3485833a849195b2ea0cf206ea21904fd49db96c5bd42440a67d0a80452"
+    },
+    {
+      "path": "public/images/ref/MAHH9_Xd9q4.webp",
+      "sha256": "8bc45759e65604db4215667af8bb37b07a6e8cfec81bb2d10f0f6d5d794464f3"
+    },
+    {
+      "path": "public/images/ref/MAHHOnURXyw.webp",
+      "sha256": "0ae86cec89c12389b997c98fd55c30869a051f44dd7b5c1f4ddaee80978f1743"
+    },
+    {
+      "path": "public/images/ref/MAHKtLJ1U8A.webp",
+      "sha256": "048a2ea6700162295520d13d3241550bb581dbcbf229e85c423b61d7056ba332"
+    },
+    {
+      "path": "public/images/ref/MAHLWtCn8_k.webp",
+      "sha256": "f67a0d161e76659f12ff3fe76488b6e91851b53831dc5fa04b068734d5c4d068"
+    },
+    {
+      "path": "public/images/ref/MAHN9CdUI8c.webp",
+      "sha256": "64f980863add4ecd31d92e347b8b4920b6ef3e32e0af55e5bfc0dc8d69ae0f0e"
+    },
+    {
+      "path": "public/images/ref/MAHP90_NSFE.webp",
+      "sha256": "739c3afb7e80d88f66d31e6237e830c826bd912e4a2876916d4bb42f19d140f0"
+    },
+    {
+      "path": "public/images/ref/MAHP9GYeyyw.webp",
+      "sha256": "fcce886ce8520f1c9e9e9e071a00ea4e2ac59518a790df8719754dfa867ddc00"
+    },
+    {
+      "path": "public/images/ref/MAHP9HTkNtw.webp",
+      "sha256": "6ed2adf16cd89d7bc6b7cf9e4529d7b524fcc17daa61f22cd470572bbdc37cab"
+    },
+    {
+      "path": "public/images/ref/MAHP9h85zXU.webp",
+      "sha256": "81effc73d59edcb1b8c186a29d965a0d90fb4279283befa883fd26cec3bfd362"
+    },
+    {
+      "path": "public/images/ref/MAHP9hnhYoA.webp",
+      "sha256": "19aa9cabe15cdc2a3f599cd007defddb718be2d5e1967388a4fa4de54f0c5b6f"
+    },
+    {
+      "path": "public/images/ref/MAHP9iNqU8w.webp",
+      "sha256": "c4ee399fc373287b6be10263d2839d4bc12ddd1ddfd255c3b77e127ebe92b775"
+    },
+    {
+      "path": "public/images/ref/MAHP9kd6GHk.webp",
+      "sha256": "5a4b8c69a4d282b76f3c9ab56b9272da7b81463871cd6caf2339217adc1bfdd3"
+    },
+    {
+      "path": "public/images/ref/MAHP9lNUFnk.webp",
+      "sha256": "27ba73104498b8fa54476417a6db520f7e03d3a72fb812fd1966afc360d4f088"
+    },
+    {
+      "path": "public/images/ref/MAHP9lY8M6A.webp",
+      "sha256": "0c68dcc80ae5c1e33a97361a91e26e0a2ae0b422678f8551474c5edf6939429c"
+    },
+    {
+      "path": "public/images/ref/MAHP9pCj_7E.webp",
+      "sha256": "136cefb98b6eac6eb1e39a5fc2cce94689b7ebe592d790fae319d4d199fd14eb"
+    },
+    {
+      "path": "public/images/ref/MAHP9pN8tJU.webp",
+      "sha256": "c1ae53344381b3fb259dfd2d4fda02622920dee930474f51c83bcbaa02f0d499"
+    },
+    {
+      "path": "public/images/ref/MAHP9rHSuds.webp",
+      "sha256": "1deedc83bfb722da0e92c1fae11070512088566682bbd6b359490278b3efe80f"
+    },
+    {
+      "path": "public/images/ref/MAHP9ro8m9o.webp",
+      "sha256": "e0c01a2600a89bcb28e5ecba55fc7ba21d1bbe17bf5ff2a851d856efa47d32b1"
+    },
+    {
+      "path": "public/images/ref/MAHP9siL3Fk.webp",
+      "sha256": "90dd457ae36176fc1ecdabfdd54a96d9fb1b2f35f29e68ce6594133a59bb96b8"
+    },
+    {
+      "path": "public/images/ref/MAHP9syLTG4.webp",
+      "sha256": "5c6d2355463e865d6f57ac2e553940f22c739ddc24e0e6de716474484af49824"
+    },
+    {
+      "path": "public/images/ref/MAHP9uxt3lE.webp",
+      "sha256": "15fdabc8ba64854799f42a4fa6f205f6f1eb0483a230646105b3839b7be26a76"
+    },
+    {
+      "path": "public/images/ref/MAHP9vMI7xA.webp",
+      "sha256": "bb8c4deb5a06e6b86ac94ff8b97d331f72c0e700436965de6d68c6b720005de2"
+    },
+    {
+      "path": "public/images/ref/MAHQDlSEorY.webp",
+      "sha256": "96f5acd23d16d8c4e030f3e77a30f451460d82eb62715d2db716d7b8a4714869"
+    },
+    {
+      "path": "public/images/ref/MAHQDnpC0Gc.webp",
+      "sha256": "90dd457ae36176fc1ecdabfdd54a96d9fb1b2f35f29e68ce6594133a59bb96b8"
+    },
+    {
+      "path": "public/images/ref/MAHQDsk7bis.webp",
+      "sha256": "0482c6343b9e557ab5702ccef0df949c80a6b26dc1f2915839fefae149c0786c"
+    },
+    {
+      "path": "public/images/ref/MAHQDsvF0sc.webp",
+      "sha256": "8123c4ecd945616616b84fd80034389a08ad674afbc23fd41fd070b1791ba07e"
+    },
+    {
+      "path": "public/images/ref/MAHQEC2uebY.webp",
+      "sha256": "b3005ec6db78e4250ead8f50ffb5cca7e6d22a1e7cbaa766dbf22e62a35c277b"
+    },
+    {
+      "path": "public/images/ref/MAHQEC__su0.webp",
+      "sha256": "aef478cd27de0c6cfcb10d35b042524e66bcd889d5e1367a4a262c063de04e12"
+    },
+    {
+      "path": "public/images/ref/MAHQECmdgB4.webp",
+      "sha256": "b1437c0f6d6ac37a6eb4145b0a218cde53c63cac5dc2fff3a53bf71026f7fac5"
+    },
+    {
+      "path": "public/images/ref/MAHQEFBvSms.webp",
+      "sha256": "67b4888ca4f407581b945d0e3a9bc0396cfe9c5cc5d287ce844e5d67997072b3"
+    },
+    {
+      "path": "public/images/ref/MAHQEFWfofY.webp",
+      "sha256": "66ac80e5bf801928088166fe4ec92531fbb70d791908d45d845f12a415b55a79"
+    },
+    {
+      "path": "public/images/ref/MAHQEGuUAIw.webp",
+      "sha256": "7a132f0007cdc4e32ededbc4f0816b43f4a65c6bd9d4b5893e4eed41449355f1"
+    },
+    {
+      "path": "public/images/ref/MAHQEHvk8wY.webp",
+      "sha256": "44bb8775f1f7f0df8e830796db658c45fa102e44724de15a0dc90404d19e697f"
+    },
+    {
+      "path": "public/images/ref/MAHQEKFy2QY.webp",
+      "sha256": "4ca26ae4040e5556190ad7439b94df762af50911d019b897a3a95ddafad995d4"
+    },
+    {
+      "path": "public/images/ref/MAHQEL__oK8.webp",
+      "sha256": "1824e344d785ae1c46bbb4a2abbab88dd877545b5a19cb959109eea78dd490da"
+    },
+    {
+      "path": "public/images/ref/MAHQENEHUPg.webp",
+      "sha256": "4662cdcfa9d58c334d75fae2edb70c4619da673693b684a8a8295c1b22112e73"
+    },
+    {
+      "path": "public/images/ref/MAHQEOJ_HX0.webp",
+      "sha256": "fdb36892e535e7f006807fbc0e8425c2e0869dff5c6075147befd5cde5bbff0f"
+    },
+    {
+      "path": "public/images/ref/MAHQEPH4wJU.webp",
+      "sha256": "f3e290879d4e114678ba8f47bb505cd9aa5e817d215d73852e919390b336d44e"
+    },
+    {
+      "path": "public/images/ref/MAHQESwwHtM.webp",
+      "sha256": "a610357c566f99d29c6417a6cb18675ae5a83ab1eab6f015c194dc65d1ea2560"
+    },
+    {
+      "path": "public/images/ref/MAHQEVbADLk.webp",
+      "sha256": "ab1b19ccc68f0e55a927d6bc75dabe912480f484c3f89741f9b929d2fcb4799e"
+    },
+    {
+      "path": "public/images/ref/MAHQEXO8lMk.webp",
+      "sha256": "2fd054c1a66b41b7e2ccbad7d9563855858eb9c32d59da9f39be8b0b14686cdb"
+    },
+    {
+      "path": "public/images/ref/MAHQEXTG_r8.webp",
+      "sha256": "920f8ddcad0d3f392755b0d8030aeb68e565e08b44d18db40c23d22a70735fc9"
+    },
+    {
+      "path": "public/images/ref/MAHQEaX6cl8.webp",
+      "sha256": "6b70c398ad2fa27a0968bd1832d5384e647cc2de41195ce5e4b562166583b6fa"
+    },
+    {
+      "path": "public/images/ref/MAHQEdVtg7Q.webp",
+      "sha256": "a3427184a4d7671802aba562ffad13444cc8df68241f0cfff3f7b11105b829c2"
+    },
+    {
+      "path": "public/images/ref/MAHQEfAT0Q0.webp",
+      "sha256": "0affda88911f72ef6927ba5380a358272aa719d1ef3548d832dcc8f1d021807c"
+    },
+    {
+      "path": "public/images/ref/favicon.svg",
+      "sha256": "f54d0e8fffd6eb39cd881f4de0e8858d24e5f00331c45b1d5534bd40c1f7e819"
+    }
+  ]
+}
