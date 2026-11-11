@@ -6,6 +6,8 @@ import { DEFAULT_SITES, type SeedSite } from "./default-content";
 import { applyContentUpdates } from "./content-updates";
 import { applyMultipageUpdate } from "./multipage-update";
 import { ensureDatabaseTables } from "./bootstrap";
+import { ensureHomeContactSections } from "./home-contact-update";
+import { applyComptoirCUpdate } from "./comptoir-c-update";
 
 let seedPromise: Promise<void> | null = null;
 
@@ -102,6 +104,8 @@ export async function ensureSeeded(): Promise<void> {
       }
       await applyContentUpdates();
       await applyMultipageUpdate();
+      await ensureHomeContactSections();
+      await applyComptoirCUpdate();
     })().catch((error) => {
       seedPromise = null;
       throw error;
